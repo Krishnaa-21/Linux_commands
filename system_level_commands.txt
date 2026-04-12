@@ -1,0 +1,135 @@
+1️⃣ uname
+
+👉 Shows system/kernel information.
+
+Syntax:
+
+uname [option]
+
+Example:
+
+uname -a
+
+👉 Shows all system info (kernel, OS, architecture)
+
+2️⃣ uptime
+
+👉 Shows how long system is running + load.
+
+Syntax:
+
+uptime
+
+Example:
+
+uptime
+
+👉 Output: system running time + users + CPU load
+
+3️⃣ date
+
+👉 Displays or sets system date & time.
+
+Syntax:
+
+date [option]
+
+Example:
+
+date
+
+👉 Shows current date & time
+
+4️⃣ who
+
+👉 Shows currently logged-in users.
+
+Syntax:
+
+who
+
+Example:
+
+who
+5️⃣ whoami
+
+👉 Displays current logged-in username.
+
+Syntax:
+
+whoami
+
+Example:
+
+whoami
+6️⃣ id
+
+👉 Shows user ID (UID), group ID (GID), and groups.
+
+Syntax:
+
+id [username]
+
+Example:
+
+id
+7️⃣ gid ❌ (Important Correction)
+
+👉 There is NO direct gid command in Linux
+
+✔ Instead use:
+
+id
+
+👉 To get only GID:
+
+id -g
+8️⃣ sudo
+
+👉 Run commands with superuser (root) privileges.
+
+Syntax:
+
+sudo <command>
+
+Example:
+
+sudo apt update
+9️⃣ shutdown
+
+👉 Safely power off or schedule shutdown.
+
+Syntax:
+
+shutdown [option] [time]
+
+Example:
+
+shutdown now
+
+👉 Shutdown immediately
+
+🔟 reboot
+
+👉 Restart the system.
+
+Syntax:
+
+reboot
+
+Example:
+
+reboot
+1️⃣1️⃣ apt
+
+👉 Package manager for Debian/Ubuntu (install/update software).
+
+Syntax:
+
+apt [command] [package]
+
+Examples:
+
+sudo apt update
+sudo apt install nginx
+sudo apt remove nginx
