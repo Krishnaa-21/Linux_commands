@@ -1,0 +1,46 @@
+1. useradd
+
+Creates a new user account in the system.
+
+useradd krishna
+2. passwd
+
+Sets or updates the password for a user.
+
+passwd krishna
+3. exit
+
+Terminates the current shell session or logs out the user.
+
+exit
+4. su
+
+Switches to another user account (default: root if no username).
+
+su krishna
+5. cat /etc/passwd
+
+Displays all user account details stored in the system.
+
+cat /etc/passwd
+6. cat /etc/group
+
+Displays all group information in the system.
+
+cat /etc/group
+7. userdel
+
+Deletes an existing user account.
+
+userdel krishna
+8. useradd -m (and note on -a)
+
+-m creates a home directory for the user; -a is not valid with useradd.
+
+useradd -m krishna
+9. gpasswd -a and -M
+
+-a adds a user to a group; -M sets (overwrites) group members.
+
+gpasswd -a krishna devteam
+gpasswd -M krishna,ram devteam
