@@ -1,0 +1,70 @@
+1️⃣ ping
+
+👉 Checks connectivity between your system and another host.
+
+Syntax:
+
+ping <host>
+
+Example:
+
+ping google.com
+2️⃣ netstat
+
+👉 Displays network connections, ports, and stats.
+
+Syntax:
+
+netstat [options]
+
+Example:
+
+netstat -tuln
+3️⃣ ifconfig (older) / ip
+
+👉 Shows or configures network interfaces.
+
+Syntax:
+
+ifconfig
+
+Example:
+
+ifconfig
+
+👉 Modern:
+
+ip a
+4️⃣ traceroute
+
+👉 Tracks path packets take to a destination.
+
+Syntax:
+
+traceroute <host>
+
+Example:
+
+traceroute google.com
+5️⃣ ip route
+
+👉 Shows routing table.
+
+Syntax:
+
+ip route
+
+Example:
+
+ip route
+6️⃣ mtr
+
+👉 Combines ping + traceroute (real-time).
+
+Syntax:
+
+mtr <host>
+
+Example:
+
+mtr google.com
