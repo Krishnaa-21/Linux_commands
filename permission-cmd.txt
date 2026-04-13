@@ -45,6 +45,7 @@ chmod [permissions] file
 Example:
 
 chmod 755 script.sh
+chmod 766 <file.name>
 5️⃣ umask
 
 👉 Sets default permission for new files.
