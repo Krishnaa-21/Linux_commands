@@ -91,3 +91,15 @@ ss -tuln
 Example:
 
 ss -tuln
+
+1️⃣3️⃣ iptables
+
+👉 Manages firewall rules (allow/deny traffic).
+
+Syntax:
+
+iptables [options]
+
+Example:
+
+sudo iptables -L
