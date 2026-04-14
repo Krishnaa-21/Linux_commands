@@ -68,3 +68,26 @@ mtr <host>
 Example:
 
 mtr google.com
+
+1️⃣1️⃣ wg (WireGuard)
+
+👉 VPN tool for secure networking.
+
+Syntax:
+
+wg
+
+Example:
+
+sudo wg show
+1️⃣2️⃣ ss (you wrote WG here, but correct is ss earlier)
+
+👉 Shows active connections (modern netstat).
+
+Syntax:
+
+ss -tuln
+
+Example:
+
+ss -tuln
