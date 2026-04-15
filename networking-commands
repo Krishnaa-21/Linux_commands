@@ -103,3 +103,15 @@ iptables [options]
 Example:
 
 sudo iptables -L
+
+1️⃣4️⃣ mtr
+
+👉 Combines ping + traceroute (network debugging).
+
+Syntax:
+
+mtr <host>
+
+Example:
+
+mtr google.com
