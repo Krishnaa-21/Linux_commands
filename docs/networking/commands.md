@@ -9,6 +9,7 @@ ping <host>
 Example:
 
 ping google.com
+
 2️⃣ netstat
 
 👉 Displays network connections, ports, and stats.
@@ -20,6 +21,7 @@ netstat [options]
 Example:
 
 netstat -tuln
+
 3️⃣ ifconfig (older) / ip
 
 👉 Shows or configures network interfaces.
@@ -35,6 +37,7 @@ ifconfig
 👉 Modern:
 
 ip a
+
 4️⃣ traceroute
 
 👉 Tracks path packets take to a destination.
@@ -46,6 +49,7 @@ traceroute <host>
 Example:
 
 traceroute google.com
+
 5️⃣ ip route
 
 👉 Shows routing table.
@@ -57,6 +61,7 @@ ip route
 Example:
 
 ip route
+
 6️⃣ mtr
 
 👉 Combines ping + traceroute (real-time).
@@ -80,6 +85,7 @@ wg
 Example:
 
 sudo wg show
+
 1️⃣2️⃣ ss (you wrote WG here, but correct is ss earlier)
 
 👉 Shows active connections (modern netstat).
