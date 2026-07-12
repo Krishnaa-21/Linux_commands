@@ -123,3 +123,5 @@ rsync [options] source destination
 Example:
 
 rsync -av folder/ user@host:/backup/
+
+reboot 
