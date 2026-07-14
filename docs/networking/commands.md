@@ -234,6 +234,8 @@ sudo iptables -L
 
 ---
 
+##10 telnet 
+
 # 📚 Quick Reference
 
 | Command | Purpose |
