@@ -115,3 +115,5 @@ mtr <host>
 Example:
 
 mtr google.com
+
+1️⃣5️⃣ hostname: Shows the current name of your computer on the local network.
