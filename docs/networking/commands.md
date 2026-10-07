@@ -1,119 +1,267 @@
-1️⃣ ping
+# 🌐 Essential Linux Networking Commands
 
-👉 Checks connectivity between your system and another host.
+This document covers some of the most commonly used Linux networking commands for troubleshooting, monitoring, and network management.
 
-Syntax:
+---
 
+## 1. `ping`
+
+**Description**
+
+Checks connectivity between your system and a remote host by sending ICMP Echo Request packets.
+
+### Syntax
+
+```bash
 ping <host>
+```
 
-Example:
+### Example
 
+```bash
 ping google.com
-2️⃣ netstat
+```
 
-👉 Displays network connections, ports, and stats.
+---
 
-Syntax:
+## 2. `netstat`
 
+**Description**
+
+Displays active network connections, listening ports, routing tables, and network statistics.
+
+> **Note:** `netstat` is considered legacy. Use `ss` on modern Linux distributions.
+
+### Syntax
+
+```bash
 netstat [options]
+```
 
-Example:
+### Example
 
+```bash
 netstat -tuln
-3️⃣ ifconfig (older) / ip
+```
 
-👉 Shows or configures network interfaces.
+**Common Options**
 
-Syntax:
+| Option | Description |
+|---------|-------------|
+| `-t` | Show TCP connections |
+| `-u` | Show UDP connections |
+| `-l` | Show listening ports |
+| `-n` | Display numerical addresses |
 
+---
+
+## 3. `ifconfig` (Legacy)
+
+**Description**
+
+Displays or configures network interfaces.
+
+> **Note:** `ifconfig` has been replaced by the `ip` command on modern Linux systems.
+
+### Syntax
+
+```bash
 ifconfig
+```
 
-Example:
+### Example
 
+```bash
 ifconfig
+```
 
-👉 Modern:
+---
 
+## 4. `ip`
+
+**Description**
+
+Modern utility for managing network interfaces, IP addresses, routes, and more.
+
+### Syntax
+
+```bash
+ip <object> <command>
+```
+
+### Example
+
+```bash
 ip a
-4️⃣ traceroute
+```
 
-👉 Tracks path packets take to a destination.
+or
 
-Syntax:
+```bash
+ip addr show
+```
 
+---
+
+## 5. `traceroute`
+
+**Description**
+
+Displays the route packets take from your system to a destination host.
+
+### Syntax
+
+```bash
 traceroute <host>
+```
 
-Example:
+### Example
 
+```bash
 traceroute google.com
-5️⃣ ip route
+```
 
-👉 Shows routing table.
+---
 
-Syntax:
+## 6. `ip route`
 
+**Description**
+
+Displays or modifies the system routing table.
+
+### Syntax
+
+```bash
 ip route
+```
 
-Example:
+### Example
 
+```bash
 ip route
-6️⃣ mtr
+```
 
-👉 Combines ping + traceroute (real-time).
+---
 
-Syntax:
+## 7. `mtr`
 
+**Description**
+
+Combines the functionality of **ping** and **traceroute** to provide real-time network diagnostics.
+
+### Syntax
+
+```bash
 mtr <host>
+```
 
-Example:
+### Example
 
+```bash
 mtr google.com
+```
 
-1️⃣1️⃣ wg (WireGuard)
+---
 
-👉 VPN tool for secure networking.
+## 8. `wg` (WireGuard)
 
-Syntax:
+**Description**
 
+Manages and displays WireGuard VPN interfaces and peer information.
+
+### Syntax
+
+```bash
 wg
+```
 
-Example:
+### Example
 
+```bash
 sudo wg show
-1️⃣2️⃣ ss (you wrote WG here, but correct is ss earlier)
+```
 
-👉 Shows active connections (modern netstat).
+---
 
-Syntax:
+## 9. `ss`
 
+**Description**
+
+Displays socket statistics, active network connections, and listening ports.
+
+> **Note:** `ss` is the modern replacement for `netstat`.
+
+### Syntax
+
+```bash
+ss [options]
+```
+
+### Example
+
+```bash
 ss -tuln
+```
 
-Example:
+**Common Options**
 
-ss -tuln
+| Option | Description |
+|---------|-------------|
+| `-t` | TCP sockets |
+| `-u` | UDP sockets |
+| `-l` | Listening sockets |
+| `-n` | Show numerical addresses |
 
-1️⃣3️⃣ iptables
+---
 
-👉 Manages firewall rules (allow/deny traffic).
+## 10. `iptables`
 
-Syntax:
+**Description**
 
+Configures and manages Linux firewall rules.
+
+### Syntax
+
+```bash
 iptables [options]
+```
 
-Example:
-
-sudo iptables -L
-
-1️⃣4️⃣ mtr
-
-👉 Combines ping + traceroute (network debugging).
-
-Syntax:
-
-mtr <host>
-
-Example:
 
 mtr google.com
 
 1️⃣5️⃣ hostname: Shows the current name of your computer on the local network.
+=======
+### Example
+
+```bash
+sudo iptables -L
+```
+
+---
+
+##10 telnet 
+
+# 📚 Quick Reference
+
+| Command | Purpose |
+|----------|---------|
+| `ping` | Test network connectivity |
+| `netstat` | View network connections (Legacy) |
+| `ifconfig` | View network interfaces (Legacy) |
+| `ip` | Modern network configuration utility |
+| `traceroute` | Trace packet route to a destination |
+| `ip route` | Display routing table |
+| `mtr` | Real-time network diagnostics |
+| `wg` | Manage WireGuard VPN |
+| `ss` | View socket statistics (Modern) |
+| `iptables` | Configure firewall rules |
+
+---
+
+> **Recommended for Modern Linux Systems**
+>
+> Prefer using:
+>
+> - `ip` instead of `ifconfig`
+> - `ss` instead of `netstat`
+> - `nftables` instead of `iptables` (on newer distributions)
